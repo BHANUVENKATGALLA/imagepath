@@ -1,0 +1,21 @@
+from PIL import Image
+import numpy as np
+
+# Load the image from path
+image_path = 'C:\\image.png'
+image = Image.open(image_path)
+
+# Display the original image
+image.show()
+
+# Convert image to a numpy array
+image_array = np.array(image)
+
+# Scaling
+scaled_image = image.resize((120, 70))  # Specify the new dimensions
+scaled_image.show()
+
+# Rotation
+angle_degrees = 30  # Specify the rotation angle in degrees
+rotated_image = image.rotate(angle_degrees)
+rotated_image.show()
